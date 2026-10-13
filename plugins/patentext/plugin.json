@@ -1,0 +1,9 @@
+{
+	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+	"name": "patentext",
+	"version": "0.1.0",
+	"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio.",
+	"author": {
+		"name": "Patentext"
+	}
+}

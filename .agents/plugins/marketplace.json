@@ -1,0 +1,19 @@
+{
+	"name": "patentext-agent-plugins",
+	"interface": {
+		"displayName": "Patentext"
+	},
+	"plugins": [
+		{
+			"name": "patentext",
+			"source": {
+				"source": "local",
+				"path": "./plugins/patentext"
+			},
+			"policy": {
+				"installation": "AVAILABLE"
+			},
+			"category": "Legal"
+		}
+	]
+}

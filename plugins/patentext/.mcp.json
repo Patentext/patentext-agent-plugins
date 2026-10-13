@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "patentext": {
+      "type": "http",
+      "url": "https://server.patentext.com/mcp"
+    }
+  }
+}

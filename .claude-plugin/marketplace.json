@@ -1,0 +1,13 @@
+{
+	"name": "patentext-agent-plugins",
+	"owner": {
+		"name": "Patentext"
+	},
+	"plugins": [
+		{
+			"name": "patentext",
+			"source": "./plugins/patentext",
+			"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio."
+		}
+	]
+}
