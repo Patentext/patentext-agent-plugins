@@ -1,10 +1,13 @@
 {
-	"name": "Patentext",
+	"name": "patentext",
 	"version": "0.1.1",
 	"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio.",
 	"author": {
 		"name": "Patentext, Inc."
 	},
 	"skills": "./skills/",
-	"mcpServers": "./.mcp.json"
+	"mcpServers": "./.mcp.json",
+	"interface": {
+		"displayName": "Patentext"
+	}
 }
