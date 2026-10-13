@@ -1,13 +1,16 @@
 {
 	"name": "patentext-agent-plugins",
 	"owner": {
-		"name": "Patentext"
+		"name": "Patentext",
+		"url": "https://patentext.com"
 	},
 	"plugins": [
 		{
 			"name": "patentext",
 			"source": "./plugins/patentext",
-			"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio."
+			"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio.",
+			"homepage": "https://patentext.com"
 		}
-	]
+	],
+	"description": "Official Patentext plugins for patent strategy and portfolio management."
 }
