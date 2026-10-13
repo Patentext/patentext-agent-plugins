@@ -1,6 +1,6 @@
 {
 	"name": "patentext",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio.",
 	"author": {
 		"name": "Patentext, Inc.",
@@ -13,7 +13,9 @@
 		"websiteURL": "https://patentext.com",
 		"privacyPolicyURL": "https://patentext.com/legal/privacy-policy",
 		"termsOfServiceURL": "https://patentext.com/legal/terms-conditions",
-		"supportURL": "https://patentext.com/contact-us"
+		"supportURL": "https://patentext.com/contact-us",
+		"composerIcon": "./assets/icon.png",
+		"logo": "./assets/icon.png"
 	},
 	"homepage": "https://patentext.com"
 }
