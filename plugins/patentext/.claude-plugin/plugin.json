@@ -1,8 +1,8 @@
 {
 	"name": "patentext",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Connect your agent to the Patentext platform to build your patent strategy and manage your portfolio.",
 	"author": {
-		"name": "Patentext"
+		"name": "Patentext, Inc."
 	}
 }
