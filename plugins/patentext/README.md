@@ -1,6 +1,6 @@
 # Patentext
 
-Connect your agent to the Patentext strategy agent to read and continue your organization's patent strategy conversation.
+Connect your agent to Patentext to take part in the strategy and invention disclosure interviews, record inventions and their documents, and review patent drafts.
 
 ## Package contents
 
@@ -9,6 +9,8 @@ Connect your agent to the Patentext strategy agent to read and continue your org
 - `.mcp.json`: shared remote MCP connection configuration for OpenAI clients and Claude Code.
 - `mcp.json`: equivalent connection settings in the portable Agent Plugins MCP format.
 - `skills/strategy/SKILL.md`: shared instructions for strategy conversations.
+- `skills/disclosure/SKILL.md`: shared instructions for recording inventions and invention disclosure interviews.
+- `skills/review/SKILL.md`: shared instructions for reading patent drafts in review and replying to comments.
 - `assets/`: plugin branding assets.
 
 The package uses the supported OpenAI compatibility layout because the local Codex 0.162.0 loader discovered the strategy skill but reported no MCP servers with a root portable `plugin.json`. Using `.codex-plugin/plugin.json` with `mcpServers: "./.mcp.json"` restored server discovery. Keep the root portable manifest absent while this workaround is needed.
