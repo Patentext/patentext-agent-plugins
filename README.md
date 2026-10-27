@@ -2,11 +2,17 @@
 
 # Patentext Agent Plugins
 
-Connect your AI agent to [Patentext](https://patentext.com) to build and continue your company's patent strategy.
+Connect your AI agent to [Patentext](https://patentext.com) to build your company's patent strategy, record and disclose inventions, and review patent drafts.
 
-The Patentext plugin lets your agent catch up on your strategy conversation, contribute information about your business, and answer the strategy agent's follow-up questions. It includes the connection to Patentext and a skill that guides your agent through the conversation.
+The Patentext plugin lets your agent do the following:
 
-You'll need a Patentext Lab account with access to your organization's strategy workspace, and a current version of Codex or Claude Code with plugin support.
+- Read your patent strategy, inventions, disclosures, and patent projects.
+- Talk to the Patentext agent: ask it questions, record inventions, and take part in the strategy interview and invention disclosure interviews.
+- Read patent application drafts that your law firm shares for review, and their comments.
+
+The plugin includes the connection to Patentext and skills that guide your agent through each task.
+
+You'll need a Patentext Lab account in your organization, and a current version of Codex or Claude Code with plugin support. Some tools depend on your Patentext plan: invention disclosures need Starter or Enterprise.
 
 ## Install
 
@@ -48,9 +54,9 @@ The plugin uses your Patentext sign-in. You do not need to create or paste an AP
 - **Codex:** follow the connection prompt when installing or first using Patentext.
 - **Claude Code:** enter `/mcp`, select the Patentext server, and follow the authentication flow.
 
-Complete the browser sign-in with the account you use for Patentext. If asked to choose an organization, select the one whose strategy you want to work on, then return to your agent.
+Complete the browser sign-in with the account you use for Patentext. If asked to choose an organization, select the one you want to work in, then return to your agent.
 
-To check the connection, ask: **"Use Patentext to show me the current state of our patent strategy."** Your agent should retrieve the strategy workspace or explain any remaining access issue.
+To check the connection, ask: **"Which Patentext conversations are waiting on me?"** Your agent should list your Patentext agent threads or explain any remaining access issue.
 
 ## Try it
 
@@ -60,9 +66,15 @@ Once connected, ask your agent to use Patentext:
 
 > Help me continue our patent strategy interview in Patentext.
 
-> Summarize our Patentext strategy conversation and the questions still outstanding.
+> I built a new gripper controller. Record it in Patentext from our design doc and start its disclosure.
 
-When you ask your agent to contribute answers, those messages become part of your organization's strategy conversation in Patentext. Some strategy responses take a few minutes; your agent can check for the result while the strategy agent works.
+> Continue the disclosure interview for the gripper controller.
+
+> Read the patent draft that's in review and summarize the open comments.
+
+When your agent sends a message to the Patentext agent, Patentext shows it in that conversation as sent by you through MCP. Some responses take a few minutes; your agent can check for the result while the Patentext agent works. A message sent while the agent is working waits for it to finish, unless your agent asks to interrupt.
+
+Messages to the Patentext agent are rate limited per user and per organization. If your agent reports `McpRateLimited`, wait for the time it gives, or continue in Patentext Lab.
 
 ## Other MCP-compatible agents
 
@@ -74,13 +86,14 @@ For an agent that supports remote MCP servers with OAuth, add a connection using
 | Transport | Streamable HTTP |
 | Authentication | OAuth using your Patentext account |
 
-Follow your agent's instructions for adding a remote MCP server and completing sign-in. A direct connection provides the strategy tools; the plugin also includes the strategy skill.
+Follow your agent's instructions for adding a remote MCP server and completing sign-in. A direct connection provides all the Patentext tools; the plugin also includes the skills.
 
 ## Help
 
 - **The plugin is missing:** check that you added the Patentext marketplace, then reopen your agent's plugin browser.
 - **Patentext tools are unavailable:** check that the plugin is installed and enabled, complete sign-in, and start a new chat.
 - **You cannot access your organization:** confirm that you signed in with the same account you use in Patentext Lab and have access to the intended organization.
+- **A tool reports `SubscriptionRequired`:** your organization's Patentext plan doesn't include that feature.
 - **Sign-in has expired:** reconnect Patentext through your agent's connection settings. In Claude Code, use `/mcp` to re-authenticate.
 
 For installation problems, [open an issue](https://github.com/Patentext/patentext-agent-plugins/issues) with your agent's name, version, and the error message. Keep credentials and confidential invention details out of public issues.
