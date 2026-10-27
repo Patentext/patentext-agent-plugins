@@ -1,6 +1,6 @@
 ---
 name: review
-description: Read a patent application draft that the law firm shared for review in Patentext, and reply to its comment threads, when the user asks about their patent drafts or reviews.
+description: Read a patent application draft that the law firm shared for review in Patentext, and its comment threads, when the user asks about their patent drafts or reviews.
 ---
 
 # Patentext Draft Review
@@ -11,8 +11,8 @@ If the tools are unavailable, explain that the Patentext connection must be conf
 
 ## Workflow
 
-1. Call `get_overview` to find drafts waiting for review. To find a specific project, call `list_patent_projects` and look for phase `IN_REVIEW`.
-2. Call `read_patent_draft` with the project's `matterId`. Long drafts arrive in parts: pass `nextStartAt` from the previous result as `startAt` to keep reading. Open comment threads arrive with the first part.
-3. To answer a comment, call `reply_to_comment` with the `matterId`, the `threadId`, and the reply. The law firm sees the reply under the user's name, so confirm the wording with the user first.
+1. Call `list_patent_projects` and look for phase `IN_REVIEW`. `get_patent_project` shows a project's abstract, independent claims, and inventor review status.
+2. Call `read_patent_application` with the project's `matterId`. Long drafts arrive in parts: pass `nextStartAt` from the previous result as `startAt` to keep reading.
+3. Call `read_patent_application_comments` with the same `matterId` for the open comment threads. Pass `includeResolved` to see resolved ones too.
 
-Approving a draft is the user's decision. To approve it, send the user to the draft's `labUrl`.
+Replying to comments and approving a draft happen in Patentext Lab. Help the user prepare a reply, then send them to the draft's `labUrl`.

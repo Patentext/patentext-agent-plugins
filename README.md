@@ -6,14 +6,13 @@ Connect your AI agent to [Patentext](https://patentext.com) to build your compan
 
 The Patentext plugin lets your agent do the following:
 
-- See what's waiting on you in Patentext.
-- Take part in the strategy interview and in invention disclosure interviews.
-- Record inventions and add the documents that describe them.
-- Read patent application drafts that your law firm shares for review, and reply to their comments.
+- Read your patent strategy, inventions, disclosures, and patent projects.
+- Talk to the Patentext agent: ask it questions, record inventions, and take part in the strategy interview and invention disclosure interviews.
+- Read patent application drafts that your law firm shares for review, and their comments.
 
 The plugin includes the connection to Patentext and skills that guide your agent through each task.
 
-You'll need a Patentext Lab account in your organization, and a current version of Codex or Claude Code with plugin support. Some tools depend on your Patentext plan: invention disclosures need Starter or Enterprise, and concept discovery needs Enterprise.
+You'll need a Patentext Lab account in your organization, and a current version of Codex or Claude Code with plugin support. Some tools depend on your Patentext plan: invention disclosures need Starter or Enterprise.
 
 ## Install
 
@@ -57,7 +56,7 @@ The plugin uses your Patentext sign-in. You do not need to create or paste an AP
 
 Complete the browser sign-in with the account you use for Patentext. If asked to choose an organization, select the one you want to work in, then return to your agent.
 
-To check the connection, ask: **"What's waiting on me in Patentext?"** Your agent should show an overview of your Patentext work or explain any remaining access issue.
+To check the connection, ask: **"Which Patentext conversations are waiting on me?"** Your agent should list your Patentext agent threads or explain any remaining access issue.
 
 ## Try it
 
@@ -67,13 +66,15 @@ Once connected, ask your agent to use Patentext:
 
 > Help me continue our patent strategy interview in Patentext.
 
-> I built a new gripper controller. Record it in Patentext with our design doc and start its disclosure.
+> I built a new gripper controller. Record it in Patentext from our design doc and start its disclosure.
 
 > Continue the disclosure interview for the gripper controller.
 
 > Read the patent draft that's in review and summarize the open comments.
 
-When your agent sends a message to the strategy agent or a disclosure agent, Patentext shows it in that conversation as sent by you through MCP. Some responses take a few minutes; your agent can check for the result while the Patentext agent works.
+When your agent sends a message to the Patentext agent, Patentext shows it in that conversation as sent by you through MCP. Some responses take a few minutes; your agent can check for the result while the Patentext agent works. A message sent while the agent is working waits for it to finish, unless your agent asks to interrupt.
+
+Messages to the Patentext agent are rate limited per user and per organization. If your agent reports `McpRateLimited`, wait for the time it gives, or continue in Patentext Lab.
 
 ## Other MCP-compatible agents
 
